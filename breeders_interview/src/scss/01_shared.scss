@@ -1,0 +1,214 @@
+@import "partials/params";
+@import "partials/mixins";
+
+
+.interview{
+  position: relative;
+  background-color: #efefef;
+  padding: 0 0 100px;
+  margin-top: 60px;
+  &_question{
+    background-color: #fff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    &.gray{
+      background-color: #efefef;
+      & .interview_input{
+        background-color: #fff;
+      }
+    }
+  }
+  &_input{
+    width: 100%;
+    max-width: 500px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    background-color: #efefef;
+    margin-top: 10px;
+    padding: 0 15px;
+    &:focus{
+      border: none;
+    }
+  }
+  &_number{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  &_text{
+    font-size: 20px;
+    font-weight: 400;
+    &_info{
+      font-size: 16px;
+      color: #afafaf;
+    }
+  }
+  &_answer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    &.custom{
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 0;
+    }
+  }
+  & .radio{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    margin: 0;
+    &_custom{
+      position: relative;
+      margin: 0;
+      margin-right: 20px;
+      margin-top: 20px;
+      &.small{
+        & .radio_text{
+          width: 100px;
+        }
+      }
+      & input {
+        position: absolute;
+        width: 100%;
+        height: 30px;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 0;
+        &:checked + .radio_text{
+          border: 1px solid #DF2A27;
+          background-color: #DF2A27;
+          color: #fff;
+          transition: 0.3s;
+        }
+      }
+      & .radio_text{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        width: 180px;
+        height: 35px;
+        border: 1px solid #000;
+        background-color: transparent;
+        border-radius: 35px;
+        padding: 0;
+        z-index: 5;
+        transition: 0.3s;
+        cursor: pointer;
+        &:before{
+          display: none;
+        }
+      }
+    }
+    & input {
+      position: absolute;
+      width: 36px;
+      height: 36px;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      z-index: -1;
+      opacity: 0;
+      &:checked + .radio_text:before{
+        border: 1px solid #DF2A27;
+        background-color: #DF2A27;
+        transition: 0.3s;
+      }
+    }
+    &_text{
+      position: relative;
+      font-size: 14px;
+      font-weight: 400;
+      text-align: left;
+      padding: 8px 0 8px 22px;
+      width: 100%;
+      cursor: pointer;
+      z-index: 5;
+      &:before{
+        content: '';
+        position: absolute;
+        border: 1px solid #000;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 10px;
+        height: 10px;
+        background-color: transparent;
+        transition: all 0.3s;
+      }
+    }
+  }
+  & .checkbox{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    margin: 0;
+    & input {
+      position: absolute;
+      width: 36px;
+      height: 36px;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      z-index: -1;
+      opacity: 0;
+      &:checked + .checkbox_text:before{
+        border: 1px solid #DF2A27;
+        background-color: #DF2A27;
+        transition: 0.3s;
+      }
+    }
+    &_text{
+      position: relative;
+      font-size: 14px;
+      font-weight: 400;
+      text-align: left;
+      padding: 8px 0 8px 22px;
+      width: 100%;
+      cursor: pointer;
+      z-index: 5;
+      &:before{
+        content: '';
+        position: absolute;
+        border: 1px solid #000;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 10px;
+        height: 10px;
+        background-color: transparent;
+        transition: all 0.3s;
+      }
+    }
+  }
+  &_submit{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DF2A27;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    width: 180px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 30px auto 0;
+    transition: 0.3s;
+    &:hover{
+      background-color: #AF2627;
+      transition: 0.3s;
+    }
+  }
+}

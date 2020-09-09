@@ -1,0 +1,240 @@
+.interview {
+  position: relative;
+  background-color: #efefef;
+  padding: 0 0 100px;
+  margin-top: 60px;
+}
+
+.interview_question {
+  background-color: #fff;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.interview_question.gray {
+  background-color: #efefef;
+}
+
+.interview_question.gray .interview_input {
+  background-color: #fff;
+}
+
+.interview_input {
+  width: 100%;
+  max-width: 500px;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  background-color: #efefef;
+  margin-top: 10px;
+  padding: 0 15px;
+}
+
+.interview_input:focus {
+  border: none;
+}
+
+.interview_number {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.interview_text {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.interview_text_info {
+  font-size: 16px;
+  color: #afafaf;
+}
+
+.interview_answer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.interview_answer.custom {
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 0;
+}
+
+.interview .radio {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0;
+}
+
+.interview .radio_custom {
+  position: relative;
+  margin: 0;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.interview .radio_custom.small .radio_text {
+  width: 100px;
+}
+
+.interview .radio_custom input {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+}
+
+.interview .radio_custom input:checked+.radio_text {
+  border: 1px solid #df2a27;
+  background-color: #df2a27;
+  color: #fff;
+  transition: .3s;
+}
+
+.interview .radio_custom .radio_text {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  width: 180px;
+  height: 35px;
+  border: 1px solid #000;
+  background-color: transparent;
+  border-radius: 35px;
+  padding: 0;
+  z-index: 5;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.interview .radio_custom .radio_text:before {
+  display: none;
+}
+
+.interview .radio input {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: -1;
+  opacity: 0;
+}
+
+.interview .radio input:checked+.radio_text:before {
+  border: 1px solid #df2a27;
+  background-color: #df2a27;
+  transition: .3s;
+}
+
+.interview .radio_text {
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+  padding: 8px 0 8px 22px;
+  width: 100%;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.interview .radio_text:before {
+  content: '';
+  position: absolute;
+  border: 1px solid #000;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  transition: all .3s;
+}
+
+.interview .checkbox {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0;
+}
+
+.interview .checkbox input {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: -1;
+  opacity: 0;
+}
+
+.interview .checkbox input:checked+.checkbox_text:before {
+  border: 1px solid #df2a27;
+  background-color: #df2a27;
+  transition: .3s;
+}
+
+.interview .checkbox_text {
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+  padding: 8px 0 8px 22px;
+  width: 100%;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.interview .checkbox_text:before {
+  content: '';
+  position: absolute;
+  border: 1px solid #000;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  transition: all .3s;
+}
+
+.interview_submit {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #df2a27;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  width: 180px;
+  height: 40px;
+  border-radius: 5px;
+  margin: 30px auto 0;
+  transition: .3s;
+}
+
+.interview_submit:hover {
+  background-color: #af2627;
+  transition: .3s;
+}
